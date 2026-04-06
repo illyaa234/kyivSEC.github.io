@@ -1,0 +1,421 @@
+<!doctype html>
+<html lang="uk">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Пентест, аудит, SOC, реагування на інциденти та навчання. Допомагаємо бізнесу зменшити ризики та підняти рівень кіберстійкості."
+    />
+    <meta name="theme-color" content="#0b1020" />
+
+    <title>KyivSec — кібербезпека для бізнесу</title>
+
+    <meta property="og:title" content="KyivSec — кібербезпека для бізнесу" />
+    <meta
+      property="og:description"
+      content="Пентест, аудит, SOC, реагування на інциденти та навчання. Практична кібербезпека без зайвої бюрократії."
+    />
+    <meta property="og:type" content="website" />
+
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="styles.css" />
+    <script>
+      (() => {
+        try {
+          const saved = localStorage.getItem("theme");
+          const prefersDark = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
+          const theme = saved ?? (prefersDark ? "dark" : "light");
+          document.documentElement.dataset.theme = theme;
+        } catch {}
+      })();
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Перейти до контенту</a>
+
+    <header class="topbar" data-elevate>
+      <div class="container topbar__inner">
+        <a class="brand" href="#top" aria-label="KyivSec — на головну">
+          <span class="brand__mark" aria-hidden="true">
+            <svg viewBox="0 0 24 24" role="img" focusable="false">
+              <path
+                d="M12 2 20 6v6c0 5-3.5 9.4-8 10-4.5-.6-8-5-8-10V6l8-4z"
+                fill="currentColor"
+              />
+              <path
+                d="M9.3 12.2 11 14l3.7-4"
+                fill="none"
+                stroke="var(--bg)"
+                stroke-width="2.2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </span>
+          <span class="brand__text">KyivSec</span>
+        </a>
+
+        <nav class="nav" aria-label="Навігація">
+          <button
+            class="nav__toggle"
+            type="button"
+            data-nav-toggle
+            aria-controls="nav-panel"
+            aria-expanded="false"
+          >
+            <span class="sr-only">Відкрити меню</span>
+            <span class="nav__burger" aria-hidden="true"></span>
+          </button>
+
+          <div class="nav__panel" id="nav-panel" data-nav-panel>
+            <a class="nav__link" href="#services">Послуги</a>
+            <a class="nav__link" href="#approach">Підхід</a>
+            <a class="nav__link" href="#pricing">Пакети</a>
+            <a class="nav__link" href="#faq">FAQ</a>
+            <a class="nav__link" href="#contact">Контакти</a>
+            <button class="btn btn--ghost nav__theme" type="button" data-theme-toggle>
+              <span class="sr-only">Перемкнути тему</span>
+              <span aria-hidden="true">Тема</span>
+            </button>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="hero" id="top">
+        <div class="container hero__grid">
+          <div class="hero__copy">
+            <p class="pill">Пентест • Аудит • SOC • IR</p>
+            <h1 class="hero__title">
+              Кібербезпека, яка знаходить ризики
+              <span class="accent">до того</span>, як їх знайде атакувальник.
+            </h1>
+            <p class="hero__subtitle">
+              Практичні перевірки, зрозумілі звіти, план ремедіації. Працюємо швидко, конфіденційно та з вимірюваним
+              результатом.
+            </p>
+            <div class="hero__cta">
+              <a class="btn btn--primary" href="#contact">Отримати консультацію</a>
+              <a class="btn btn--secondary" href="#services">Дивитись послуги</a>
+            </div>
+            <dl class="hero__metrics" aria-label="Ключові показники">
+              <div class="metric">
+                <dt>48 год</dt>
+                <dd>перші рекомендації після старту</dd>
+              </div>
+              <div class="metric">
+                <dt>10+ років</dt>
+                <dd>досвіду в розробці та SecOps</dd>
+              </div>
+              <div class="metric">
+                <dt>0 зайвого</dt>
+                <dd>лише те, що реально знижує ризик</dd>
+              </div>
+            </dl>
+          </div>
+
+          <div class="hero__card" aria-label="Панель кіберстатусу">
+            <div class="glass">
+              <div class="glass__row">
+                <div class="glass__label">Поточний рівень</div>
+                <div class="glass__value">Оцінка: <strong>A-</strong></div>
+              </div>
+              <div class="status">
+                <div class="status__item"><span class="dot dot--ok" aria-hidden="true"></span><span>Моніторинг логів</span></div>
+                <div class="status__item">
+                  <span class="dot dot--warn" aria-hidden="true"></span><span>Фішинг-стійкість</span>
+                </div>
+                <div class="status__item">
+                  <span class="dot dot--warn" aria-hidden="true"></span><span>Патч-менеджмент</span>
+                </div>
+                <div class="status__item">
+                  <span class="dot dot--ok" aria-hidden="true"></span><span>Резервні копії</span>
+                </div>
+              </div>
+              <div class="mini">
+                <div class="mini__bar" style="--w: 86%"><span>Веб</span><span>86%</span></div>
+                <div class="mini__bar" style="--w: 72%"><span>Хмара</span><span>72%</span></div>
+                <div class="mini__bar" style="--w: 64%"><span>Ендпоїнти</span><span>64%</span></div>
+              </div>
+              <p class="glass__note">Це демонстраційний віджет. Під час проєкту ви отримуєте реальні метрики та трекінг ремедіації.</p>
+            </div>
+          </div>
+        </div>
+        <div class="hero__bg" aria-hidden="true"></div>
+      </section>
+
+      <section class="section" id="services">
+        <div class="container">
+          <div class="section__head">
+            <h2>Послуги</h2>
+            <p>Від швидкої діагностики до повного циклу: тест → ремедіація → контроль → навчання.</p>
+          </div>
+
+          <div class="grid cards">
+            <article class="card">
+              <div class="card__icon" aria-hidden="true">🧪</div>
+              <h3>Пентест (Web / API / Mobile)</h3>
+              <p>Пошук вразливостей з пріоритизацією за ризиком. Підтверджені PoC, рекомендації та ретест.</p>
+              <ul class="list">
+                <li>OWASP Top 10 + бізнес-логіка</li>
+                <li>Ретест включено</li>
+                <li>Звіт для технічних і менеджменту</li>
+              </ul>
+            </article>
+
+            <article class="card">
+              <div class="card__icon" aria-hidden="true">🛡️</div>
+              <h3>Аудит та hardening</h3>
+              <p>Огляд конфігурацій: хмара, CI/CD, IAM, мережа, сервери. Закриваємо типові «дірки».</p>
+              <ul class="list">
+                <li>Baseline + пріоритетний план</li>
+                <li>Інфраструктура як код (за потреби)</li>
+                <li>Швидкі «win» за 1–2 тижні</li>
+              </ul>
+            </article>
+
+            <article class="card">
+              <div class="card__icon" aria-hidden="true">👁️</div>
+              <h3>SOC light / моніторинг</h3>
+              <p>Налаштування збору логів, кореляційних правил та алертів. Перші сценарії реагування.</p>
+              <ul class="list">
+                <li>Критичні алерти без шуму</li>
+                <li>Runbooks та ескалації</li>
+                <li>Звіти щотижня/щомісяця</li>
+              </ul>
+            </article>
+
+            <article class="card">
+              <div class="card__icon" aria-hidden="true">🚑</div>
+              <h3>Incident Response</h3>
+              <p>Оперативна допомога при інциденті: triage, containment, eradication, lessons learned.</p>
+              <ul class="list">
+                <li>Швидкий старт 24/7 (за договором)</li>
+                <li>Форензіка + таймлайн</li>
+                <li>План відновлення</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--alt" id="approach">
+        <div class="container">
+          <div class="section__head">
+            <h2>Підхід</h2>
+            <p>Замість «товстих» звітів — короткі ітерації та контроль прогресу.</p>
+          </div>
+
+          <ol class="steps">
+            <li class="step">
+              <div class="step__num">01</div>
+              <h3>Скоп</h3>
+              <p>Узгоджуємо активи, правила гри, часові вікна та критерії успіху.</p>
+            </li>
+            <li class="step">
+              <div class="step__num">02</div>
+              <h3>Перевірка</h3>
+              <p>Комбінація автоматизації та ручних атак. Пояснюємо ризики людською мовою.</p>
+            </li>
+            <li class="step">
+              <div class="step__num">03</div>
+              <h3>Ремедіація</h3>
+              <p>План робіт, швидкі покращення, супровід команди розробки/DevOps.</p>
+            </li>
+            <li class="step">
+              <div class="step__num">04</div>
+              <h3>Ретест і контроль</h3>
+              <p>Підтверджуємо виправлення, надаємо метрики та наступні кроки.</p>
+            </li>
+          </ol>
+
+          <div class="banner">
+            <div class="banner__content">
+              <h3>Потрібна швидка оцінка ризиків?</h3>
+              <p>Зробимо експрес-скан + ручну валідацію критичних точок і дамо план на 2 тижні.</p>
+            </div>
+            <a class="btn btn--primary" href="#contact">Запланувати дзвінок</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="pricing">
+        <div class="container">
+          <div class="section__head">
+            <h2>Пакети</h2>
+            <p>Оберіть формат під ваш розмір команди та ризик-профіль. Ціни — орієнтовні, фіналізуємо після скопу.</p>
+          </div>
+
+          <div class="grid pricing">
+            <article class="price">
+              <h3>Start</h3>
+              <p class="price__tag">для невеликих продуктів</p>
+              <p class="price__value">$1 900</p>
+              <ul class="list">
+                <li>Пентест Web/API (до 3 цілей)</li>
+                <li>Звіт + пріоритети</li>
+                <li>Ретест 1 раз</li>
+              </ul>
+              <a class="btn btn--secondary" href="#contact">Запитати деталі</a>
+            </article>
+
+            <article class="price price--featured" aria-label="Пакет Growth (рекомендовано)">
+              <div class="price__badge">Рекомендовано</div>
+              <h3>Growth</h3>
+              <p class="price__tag">для команд, що ростуть</p>
+              <p class="price__value">$4 900</p>
+              <ul class="list">
+                <li>Пентест + аудит хмари</li>
+                <li>План ремедіації на 30 днів</li>
+                <li>2 ретести + супровід</li>
+              </ul>
+              <a class="btn btn--primary" href="#contact">Почати</a>
+            </article>
+
+            <article class="price">
+              <h3>Shield</h3>
+              <p class="price__tag">для критичних систем</p>
+              <p class="price__value">від $9 900</p>
+              <ul class="list">
+                <li>Пентест + SOC light</li>
+                <li>Runbooks і tabletop exercise</li>
+                <li>Підготовка до інцидентів</li>
+              </ul>
+              <a class="btn btn--secondary" href="#contact">Обговорити</a>
+            </article>
+          </div>
+          <p class="muted">
+            Примітка: оплата/валюта/деталі залежать від юрисдикції та формату співпраці. Можемо працювати як разово,
+            так і on‑retainer.
+          </p>
+        </div>
+      </section>
+
+      <section class="section section--alt" id="faq">
+        <div class="container">
+          <div class="section__head">
+            <h2>FAQ</h2>
+            <p>Відповіді на найпоширеніші питання про пентест та аудит.</p>
+          </div>
+
+          <div class="faq">
+            <details class="faq__item">
+              <summary>Скільки часу триває пентест?</summary>
+              <div class="faq__content">
+                <p>
+                  Зазвичай 5–10 робочих днів для Web/API середнього розміру + 2–3 дні на звіт. Точний термін залежить
+                  від скопу.
+                </p>
+              </div>
+            </details>
+            <details class="faq__item">
+              <summary>Чи допомагаєте виправляти знайдені проблеми?</summary>
+              <div class="faq__content">
+                <p>
+                  Так. Додаємо план ремедіації, приклади конфігів і, за потреби, проводимо сесії з командою. Після фіксів
+                  робимо ретест.
+                </p>
+              </div>
+            </details>
+            <details class="faq__item">
+              <summary>Працюєте під NDA?</summary>
+              <div class="faq__content">
+                <p>Так. Підписуємо NDA та узгоджуємо правила доступу. Мінімізуємо отримання і зберігання чутливих даних.</p>
+              </div>
+            </details>
+            <details class="faq__item">
+              <summary>Які артефакти ви надаєте?</summary>
+              <div class="faq__content">
+                <p>Технічний звіт, executive summary, список знахідок з пріоритетами, PoC, план робіт та статус‑таблицю після ретесту.</p>
+              </div>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="contact">
+        <div class="container">
+          <div class="section__head">
+            <h2>Контакти</h2>
+            <p>Опишіть задачу — підкажемо з чого почати і запропонуємо формат співпраці.</p>
+          </div>
+
+          <div class="grid contact">
+            <form class="form" id="lead-form" autocomplete="on" novalidate>
+              <div class="field">
+                <label for="name">Ім’я</label>
+                <input id="name" name="name" type="text" autocomplete="name" placeholder="Ваше ім’я" required />
+                <p class="field__hint" data-error-for="name" aria-live="polite"></p>
+              </div>
+              <div class="field">
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" autocomplete="email" placeholder="name@company.com" required />
+                <p class="field__hint" data-error-for="email" aria-live="polite"></p>
+              </div>
+              <div class="field">
+                <label for="topic">Що потрібно?</label>
+                <select id="topic" name="topic">
+                  <option value="pentest">Пентест</option>
+                  <option value="audit">Аудит / hardening</option>
+                  <option value="soc">SOC / моніторинг</option>
+                  <option value="ir">Incident Response</option>
+                  <option value="other">Інше</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="message">Короткий опис</label>
+                <textarea id="message" name="message" rows="5" placeholder="Наприклад: web‑додаток + API, потрібен пентест перед релізом"></textarea>
+              </div>
+              <div class="form__actions">
+                <button class="btn btn--primary" type="submit">Надіслати</button>
+                <a class="btn btn--ghost" href="mailto:security@kyivsec.example?subject=Запит%20на%20кібербезпеку">Або написати на email</a>
+              </div>
+              <p class="muted" id="form-status" aria-live="polite"></p>
+            </form>
+
+            <aside class="panel">
+              <h3>Що буде далі</h3>
+              <ul class="list">
+                <li>15–20 хв дзвінок для скопу</li>
+                <li>Пропозиція з термінами та форматом</li>
+                <li>Старт робіт і перші результати</li>
+              </ul>
+              <div class="panel__line"></div>
+              <p class="muted">Порада: якщо є можливість — підготуйте перелік доменів/репозиторіїв, тестові акаунти та часові вікна.</p>
+            </aside>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer__grid">
+        <div>
+          <div class="brand brand--small">
+            <span class="brand__mark" aria-hidden="true">
+              <svg viewBox="0 0 24 24" role="img" focusable="false">
+                <path d="M12 2 20 6v6c0 5-3.5 9.4-8 10-4.5-.6-8-5-8-10V6l8-4z" fill="currentColor" />
+              </svg>
+            </span>
+            <span class="brand__text">KyivSec</span>
+          </div>
+          <p class="muted">Кібербезпека для команд, які будують і запускають продукти.</p>
+        </div>
+        <div class="footer__links">
+          <a href="#services">Послуги</a>
+          <a href="#pricing">Пакети</a>
+          <a href="#faq">FAQ</a>
+          <a href="#contact">Контакти</a>
+        </div>
+        <div class="footer__meta muted">
+          <div>© <span id="year"></span> KyivSec</div>
+          <div>illyalysenkoooo51@gmail.com</div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="app.js" defer></script>
+  </body>
+</html>
