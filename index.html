@@ -1,4 +1,3 @@
-
 <!doctype html>
 <html lang="uk">
   <head>
@@ -10,9 +9,9 @@
     />
     <meta name="theme-color" content="#0b1020" />
 
-    <title>KyivSec — кібербезпека для бізнесу</title>
+    <title>black guard — кібербезпека для бізнесу</title>
 
-    <meta property="og:title" content="KyivSec — кібербезпека для бізнесу" />
+    <meta property="og:title" content="black guard — кібербезпека для бізнесу" />
     <meta
       property="og:description"
       content="Пентест, аудит, SOC, реагування на інциденти та навчання. Практична кібербезпека без зайвої бюрократії."
@@ -37,7 +36,7 @@
 
     <header class="topbar" data-elevate>
       <div class="container topbar__inner">
-        <a class="brand" href="#top" aria-label="KyivSec — на головну">
+        <a class="brand" href="#top" aria-label="black guard — на головну">
           <span class="brand__mark" aria-hidden="true">
             <svg viewBox="0 0 24 24" role="img" focusable="false">
               <path
@@ -54,7 +53,7 @@
               />
             </svg>
           </span>
-          <span class="brand__text">KyivSec</span>
+          <span class="brand__text">black guard</span>
         </a>
 
         <nav class="nav" aria-label="Навігація">
@@ -71,7 +70,8 @@
 
           <div class="nav__panel" id="nav-panel" data-nav-panel>
             <a class="nav__link" href="#services">Послуги</a>
-            <a class="nav__link" href="#approach">Підхід</a>
+            <a class="nav__link" href="#lessons">Уроки</a>
+            <a class="nav__link" href="#ai-assistant">AI Асистент</a>
             <a class="nav__link" href="#pricing">Пакети</a>
             <a class="nav__link" href="#faq">FAQ</a>
             <a class="nav__link" href="#contact">Контакти</a>
@@ -253,11 +253,11 @@
             <article class="price">
               <h3>Start</h3>
               <p class="price__tag">для невеликих продуктів</p>
-              <p class="price__value">$1 900</p>
+              <p class="price__value">Безкоштовно 🎁</p>
               <ul class="list">
-                <li>Пентест Web/API (до 3 цілей)</li>
-                <li>Звіт + пріоритети</li>
-                <li>Ретест 1 раз</li>
+                <li>Перша консультація (30 хв)</li>
+                <li>Оцінка рівня ризику</li>
+                <li>Рекомендації для першого кроку</li>
               </ul>
               <a class="btn btn--secondary" href="#contact">Запитати деталі</a>
             </article>
@@ -268,9 +268,9 @@
               <p class="price__tag">для команд, що ростуть</p>
               <p class="price__value">$4 900</p>
               <ul class="list">
-                <li>Пентест + аудит хмари</li>
+                <li>Пентест Web + аудит хмари</li>
                 <li>План ремедіації на 30 днів</li>
-                <li>2 ретести + супровід</li>
+                <li>2 ретести з супроводом</li>
               </ul>
               <a class="btn btn--primary" href="#contact">Почати</a>
             </article>
@@ -280,9 +280,9 @@
               <p class="price__tag">для критичних систем</p>
               <p class="price__value">від $9 900</p>
               <ul class="list">
-                <li>Пентест + SOC light</li>
-                <li>Runbooks і tabletop exercise</li>
-                <li>Підготовка до інцидентів</li>
+                <li>Повний пакет: пентест + SOC</li>
+                <li>Runbooks, tabletop exercise</li>
+                <li>24/7 реагування на інциденти</li>
               </ul>
               <a class="btn btn--secondary" href="#contact">Обговорити</a>
             </article>
@@ -291,6 +291,123 @@
             Примітка: оплата/валюта/деталі залежать від юрисдикції та формату співпраці. Можемо працювати як разово,
             так і on‑retainer.
           </p>
+        </div>
+      </section>
+
+      <section class="section" id="lessons">
+        <div class="container">
+          <div class="section__head">
+            <h2>Уроки з кібербезпеки</h2>
+            <p>Малі, практичні уроки для розуміння основ защиты інформації.</p>
+          </div>
+
+          <div class="lessons__grid">
+            <article class="lesson">
+              <div class="lesson__icon">🔐</div>
+              <h3>Паролі: як правильно захищати?</h3>
+              <p>Стійкі паролі мають мати мінімум 12 символів, включати великі й малі літери, цифри та спеціальні символи. Не ділитися паролями і використовувати менеджери паролей (1Password, Bitwarden).</p>
+              <ul class="list list--small">
+                <li>✓ Використовуйте унікальні паролі для кожного сервісу</li>
+                <li>✓ Вмикайте 2FA (двофакторну аутентифікацію)</li>
+                <li>✗ Не записуйте паролі в текстові файли</li>
+              </ul>
+            </article>
+
+            <article class="lesson">
+              <div class="lesson__icon">🎣</div>
+              <h3>Фішинг: як його розпізнати?</h3>
+              <p>Фішинг — це атака через поддельні листи, посилання чи вебсайти. Злодії видають себе за легітимні компанії, щоб стекти дані.</p>
+              <ul class="list list--small">
+                <li>⚠️ Перевіряйте домен (a-mazon.com — це не amazon.com)</li>
+                <li>⚠️ Поважайте странные прохання завантажити файли</li>
+                <li>⚠️ Іномажні посилання в листах — часто фішинг</li>
+              </ul>
+            </article>
+
+            <article class="lesson">
+              <div class="lesson__icon">🔒</div>
+              <h3>Шифрування: чому воно важливе?</h3>
+              <p>Шифрування перетворює читний текст на нечитний код. Тільки людина з ключем може прочитати.</p>
+              <ul class="list list--small">
+                <li>✓ Використовуйте VPN у публічних Wi-Fi мережах</li>
+                <li>✓ Включите іскрування диску на комп'ютері</li>
+                <li>✓ HTTPS сайти безпечніші за HTTP</li>
+              </ul>
+            </article>
+
+            <article class="lesson">
+              <div class="lesson__icon">📱</div>
+              <h3>Мобільна безпека: як захистити телефон?</h3>
+              <p>Телефони часто містять чутливої інформації. Вони потребують як і комп'ютери.</p>
+              <ul class="list list--small">
+                <li>✓ Встановлюйте оновлення одразу</li>
+                <li>✓ Завантажуйте додатки тільки з офіційних магазинів</li>
+                <li>✓ Використовуйте блокування відбитком пальця/обличчям</li>
+              </ul>
+            </article>
+
+            <article class="lesson">
+              <div class="lesson__icon">🔑</div>
+              <h3>Двофакторна аутентифікація (2FA)</h3>
+              <p>2FA вимагає два способи підтвердження особи: пароль + код в додаток чи SMS.</p>
+              <ul class="list list--small">
+                <li>✓ Коди з додатків (Google Authenticator) безпечніші за SMS</li>
+                <li>✓ Зберігайте backup коди у безпечному місцю</li>
+                <li>✓ Включайте 2FA для важливих акаунтів (email, соцмережі)</li>
+              </ul>
+            </article>
+
+            <article class="lesson">
+              <div class="lesson__icon">🏢</div>
+              <h3>Безпека дома: базові кроки</h3>
+              <p>Навіть дома потрібна безпека. Налагодьте Wi-Fi, оновлюйте пристрої, завантажуйте тільки можливе.</p>
+              <ul class="list list--small">
+                <li>✓ Змініть стандартний пароль маршрутизатора</li>
+                <li>✓ Встановіть фаєрвол / антивірус</li>
+                <li>✓ Регулярно створюйте резервні копії</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--alt" id="ai-assistant">
+        <div class="container">
+          <div class="section__head">
+            <h2>AI Асистент 🤖</h2>
+            <p>Поставте питання про кібербезпеку — отримайте миттєву відповідь від нашого AI.</p>
+          </div>
+
+          <div class="ai-container">
+            <div class="ai-chat">
+              <div class="ai-messages" id="ai-messages">
+                <div class="ai-message ai-message--bot">
+                  <div class="ai-message__avatar">🤖</div>
+                  <div class="ai-message__content">
+                    Привіт! Я — AI-асистент з кібербезпеки. Можу відповісти на питання про паролі, фішинг, вірусів, VPN, шифрування та багато іншого. Що тебе цікавить?
+                  </div>
+                </div>
+              </div>
+
+              <div class="ai-input-area">
+                <input 
+                  type="text" 
+                  id="ai-question" 
+                  class="ai-input" 
+                  placeholder="Напиши своє питання про кібербезпеку..." 
+                  autocomplete="off"
+                />
+                <button type="button" id="ai-send" class="ai-send-btn">Надіслати</button>
+              </div>
+
+              <div class="ai-quick-questions">
+                <button class="ai-quick-btn" data-question="Як правильно вибрати пароль?">Як вибрати пароль?</button>
+                <button class="ai-quick-btn" data-question="Що таке фішинг?">Що таке фішинг?</button>
+                <button class="ai-quick-btn" data-question="Як захистити телефон?">Як захистити телефон?</button>
+                <button class="ai-quick-btn" data-question="Що таке VPN?">Що таке VPN?</button>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -400,18 +517,19 @@
                 <path d="M12 2 20 6v6c0 5-3.5 9.4-8 10-4.5-.6-8-5-8-10V6l8-4z" fill="currentColor" />
               </svg>
             </span>
-            <span class="brand__text">KyivSec</span>
+            <span class="brand__text">black guard</span>
           </div>
-          <p class="muted">Кібербезпека для команд, які будують і запускають продукти.</p>
+          <p class="muted">Кіберзахист для команд, які дбають про безпеку.</p>
         </div>
         <div class="footer__links">
           <a href="#services">Послуги</a>
+          <a href="#lessons">Уроки</a>
+          <a href="#ai-assistant">AI</a>
           <a href="#pricing">Пакети</a>
-          <a href="#faq">FAQ</a>
           <a href="#contact">Контакти</a>
         </div>
         <div class="footer__meta muted">
-          <div>© <span id="year"></span> KyivSec</div>
+          <div>© <span id="year"></span> black guard</div>
           <div>illyalysenkoooo51@gmail.com</div>
         </div>
       </div>
